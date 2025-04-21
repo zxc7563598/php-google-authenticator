@@ -52,7 +52,7 @@ $width = 300; // [非必传]二维码图片宽度，默认300
 $logo = '/www/wwwroot/xxxxx.png'; // [非必传]logo文件路径（如果不需要logo给空字符串即可），默认空字符串
 $logo_width = 50; // [非必传]二维码图片宽度如果logo为空则无效），默认50
 
-$getQRCodeUrl = GoogleAuthenticator::getQRCodeUrl($issuer, $label, $secret, $path, $width, $logo, $logo_width);
+$getQRCodeFile = GoogleAuthenticator::getQRCodeFile($issuer, $label, $secret, $path, $width, $logo, $logo_width);
 
 // 输出图片路径 (var_dump)
 // string(67) "/www/wwwroot/xxxxx.png"

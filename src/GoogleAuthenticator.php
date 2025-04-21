@@ -40,9 +40,8 @@ class GoogleAuthenticator
      * 
      * @return string|false
      */
-    public static function getQRCodeUrl(string $issuer, string $label, string $secret, string $path, int $width = 300, string $logo = '', int $logo_width = 50): string|false
+    public static function getQRCodeFile(string $issuer, string $label, string $secret, string $path, int $width = 300, string $logo = '', int $logo_width = 50): string|false
     {
-
         $url = 'otpauth://totp/' . urlencode($issuer . ':' . $label) .
             '?secret=' . $secret .
             '&issuer=' . urlencode($issuer);
