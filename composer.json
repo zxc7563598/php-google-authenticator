@@ -1,0 +1,21 @@
+{
+  "name": "hejunjie/google-authenticator",
+  "description": "一个用于生成和验证时间基础一次性密码（TOTP）的 PHP 包，支持 Google Authenticator 及类似应用。功能包括密钥生成、二维码创建和 OTP 验证。",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Hejunjie\\GoogleAuthenticator\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "何俊杰",
+      "email": "junjie.he.925@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "endroid/qr-code": "^5.0"
+  }
+}
