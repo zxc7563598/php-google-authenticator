@@ -16,6 +16,6 @@
   ],
   "require": {
     "php": ">=8.1",
-    "endroid/qr-code": "^5.0"
+    "endroid/qr-code": "^5.0 || ^6.0"
   }
 }
