@@ -7,7 +7,7 @@
 
 一个用于生成和验证时间基础一次性密码（TOTP）的 PHP 包，支持 Google Authenticator 及类似应用。功能包括密钥生成、二维码创建和 OTP 验证。
 
-**本项目已经经由 Zread 解析完成，如果需要快速了解项目，可以点击次数进行查看：[了解本项目](https://zread.ai/zxc7563598/php-google-authenticator)**
+**本项目已经经由 Zread 解析完成，如果需要快速了解项目，可以点击此处进行查看：[了解本项目](https://zread.ai/zxc7563598/php-google-authenticator)**
 
 ## 用途 & 初衷
 
