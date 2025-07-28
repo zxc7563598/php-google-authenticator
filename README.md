@@ -7,6 +7,8 @@
 
 A PHP library for generating and verifying Time-Based One-Time Passwords (TOTP). Compatible with Google Authenticator and similar apps, with features like secret generation, QR code creation, and OTP verification.
 
+**This project has been parsed by Zread. If you need a quick overview of the project, you can click on the number of views to view it：[Understand this project](https://zread.ai/zxc7563598/php-google-authenticator)**
+
 ## Purpose & Intention
 
 With the increasing demand for security, more and more websites and applications are adopting two-factor authentication (2FA) to protect user accounts. Google Authenticator is one of the most common 2FA applications, using time-based one-time passwords (TOTP) to ensure security.
