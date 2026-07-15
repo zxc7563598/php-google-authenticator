@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hejunjie\GoogleAuthenticator;
 
 use Endroid\QrCode\Builder\Builder;
@@ -8,7 +10,6 @@ use Endroid\QrCode\ErrorCorrectionLevel;
 use Endroid\QrCode\RoundBlockSizeMode;
 use Endroid\QrCode\Writer\PngWriter;
 use Hejunjie\GoogleAuthenticator\Support\Base32;
-use Exception;
 
 class GoogleAuthenticator
 {
@@ -72,13 +73,12 @@ class GoogleAuthenticator
      *
      * @param string $secret 用户的 TOTP 密钥
      * @param string $code 用户输入的 OTP
+     * @param integer $timeWindow 时间偏移窗口
      * 
      * @return bool 验证是否通过
      */
     public static function checkCode(string $secret, string $code, int $timeWindow = 30): bool
     {
-        // 设置时间偏移窗口（一般为 30 秒）
-        $timeWindow = 30;
         // 获取当前的 Unix 时间戳，使用时区为 UTC
         $time = floor(time() / $timeWindow);
         // 生成与时间戳相关的 HMAC-SHA1
@@ -90,6 +90,6 @@ class GoogleAuthenticator
         // 将生成的数字缩小到 6 位
         $codeGenerated %= 1000000;
         // 比较用户输入的验证码与生成的验证码
-        return str_pad($codeGenerated, 6, '0', STR_PAD_LEFT) === $code;
+        return str_pad((string) $codeGenerated, 6, '0', STR_PAD_LEFT) === $code;
     }
 }

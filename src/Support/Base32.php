@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hejunjie\GoogleAuthenticator\Support;
 
 class Base32
@@ -10,12 +12,12 @@ class Base32
     /**
      * Base32 解码
      * 
-     * @param mixed $data 用户的 TOTP 密钥
+     * @param string $data 用户的 TOTP 密钥
      * 
      * @return string 
-     * @throws Exception 
+     * @throws \Exception 
      */
-    public static function base32_decode($data)
+    public static function base32_decode(string $data): string
     {
         $base32 = strtoupper($data);
         $binary = '';
@@ -43,7 +45,7 @@ class Base32
      * 
      * @return string 
      */
-    public static function base32_encode($data)
+    public static function base32_encode(string $data): string
     {
         $output = '';
         $buffer = 0;
